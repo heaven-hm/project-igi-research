@@ -47,9 +47,9 @@ A single directory of Project I.G.I. tools, ports, remasters, mods, and compatib
 | Project | Category | Description | Link |
 | :--- | :--- | :--- | :--- |
 | **Project IGI Editor (HeavenHM)** | 3D level editor | Browser-based 3D level and mission editor for IGI 1. | [Editor](https://project-igi-editor.vercel.app) |
-| **Project IGI Studio (NaumanHSA)** | Mission editor | Mission builder with map tools, AI designer, and compiler. | [Studio](https://naumanhsa.github.io/project-igi-studio-site/) |
-| **OpenIGI** | Cross-platform reimplementation | Project I.G.I. reimplementation for Windows, Linux, macOS, and browsers; consult the project for build status. | [OpenIGI](https://openigi.com) |
 | **IGI Converter** | Asset converter | Converts and packages IGI 2D/3D assets, models, and binary formats. | [Repository](https://github.com/heaven-hm/project-igi-converter) |
+| **OpenIGI** | Cross-platform reimplementation | Project I.G.I. reimplementation for Windows, Linux, macOS, and browsers; consult the project for build status. | [OpenIGI](https://openigi.com) |
+| **Project IGI Studio (NaumanHSA)** | Mission editor | Mission builder with map tools, AI designer, and compiler. | [Studio](https://naumanhsa.github.io/project-igi-studio-site/) |
 | **IGI QVM Editor** | Script tooling | Browser-based QVM editor, compiler, and decompiler. | [QVM Editor](https://igi-qvm-editor.vercel.app) |
 | **Project I.G.I. PS Vita Port** | Platform port | Community PlayStation Vita port using original PC game data (not a PSP port). | [Release discussion](https://www.reddit.com/r/VitaPiracy/comments/1wwcwi0/release_project_igi_v01_data_files/) |
 | **Neonix Remastered** | Remaster mod | Community visual and gameplay modifications for the original game. | [Nexus Mods](https://www.nexusmods.com/projectigi/mods/5) |
