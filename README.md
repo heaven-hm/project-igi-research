@@ -40,36 +40,23 @@ We are thrilled to announce the official launch of the newly released [**Project
 | **TEX** | `.tex` | LOOP 2/7/9/11 uncompressed texture format, mipmaps, and color palettes | `Research/TEX` |
 | **WAV** | `.wav` | Audio format, Innerloop ILSF chunk headers, raw PCM and IMA ADPCM | `Research/WAV` |
 
-## Tools - Section
+## Tools and Mods
 
-### 🛠️ `Tools` section contains all the custom tools that were built for Project IGI 1/2 during research. 🛠️
+A single directory of Project I.G.I. tools, ports, remasters, mods, and compatibility patches. Each project appears once. Entries are grouped by purpose, not ranked. Inclusion does not imply independent testing, current maintenance, or use of generative AI.
 
-| Tool Name         | Description                                                                                | Link                                                         |
-| ----------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
-| 🌐 IGI Research   | Official web portal & interactive reference for IGI 1 and IGI 2 binary formats & engine.   | [Link](https://project-igi-research.vercel.app)             |
-| 🧱 IGI Editor     | Professional 3D level editor for Project I.G.I 1 — build and edit missions in the browser. | [Link](https://project-igi-editor.vercel.app)                |
-| 🎬 IGI Studio     | Mission builder with map computer, 3D close-up, *A.I* designer and built-in compiler.      | [Link](https://naumanhsa.github.io/project-igi-studio-site/) |
-| 🎮 OpenIGI            | Open-source Project I.G.I, now ported to Windows, Linux and macOS — plus a browser edition that runs from your own copy of the game. | [Link](https://openigi.com)                     |
-| 🔄 IGI Converter  | Convert and package all IGI assets — 2D/3D, binaries, models and more.                     | [Link](https://github.com/heaven-hm/project-igi-converter)   |
-| 📜 IGI QVM Editor | Online QVM editor, compiler and decompiler for game scripts and binaries.                  | [Link](https://igi-qvm-editor.vercel.app)                    |
-
-## Community Ports, Remasters, Mods and Patches
-
-The following community projects complement the research and editing tools listed above. They are grouped by purpose rather than ranked by quality. Inclusion does **not** imply that a project was developed with generative AI, that all features have been independently tested, or that it is maintained by this repository.
-
-| Project | Type | Description | Link |
+| Project | Category | Description | Link |
 | :--- | :--- | :--- | :--- |
-| **OpenIGI** | Cross-platform reimplementation | Project I.G.I. reimplementation with Windows, Linux, macOS and browser editions; see the project for current build status. | [OpenIGI](https://openigi.com) |
-| **Project IGI Editor (HeavenHM)** | 3D level editor | Browser-based level and mission editing for IGI 1. | [Editor](https://project-igi-editor.vercel.app) |
-| **Project IGI Studio (NaumanHSA)** | Mission editor | Mission-building environment with map, AI and compilation tools. | [Studio](https://naumanhsa.github.io/project-igi-studio-site/) |
-| **IGI Converter** | Asset conversion | Conversion and packaging utilities for IGI assets. | [Source](https://github.com/heaven-hm/project-igi-converter) |
-| **IGI QVM Editor** | Script tooling | Browser-based QVM editing, compiling and decompiling. | [QVM Editor](https://igi-qvm-editor.vercel.app) |
-| **Project I.G.I. PS Vita port** | Platform port | Community port requiring data from an original PC game copy; see release instructions for compatibility and status. **PS Vita, not PSP.** | [Release discussion](https://www.reddit.com/r/VitaPiracy/comments/1wwcwi0/release_project_igi_v01_data_files/) |
-| **Neonix Remastered** | Visual/gameplay mod | Community remaster modifying the original game. | [Nexus Mods](https://www.nexusmods.com/projectigi/mods/5) |
-| **IGI Patch (Blankname)** | Compatibility patch | Community fixes for running the original game on modern systems. | [IGIPatch](https://github.com/BlanknameES/IGIPatch) |
-| **IGI Research Portal** | Research documentation | Interactive reference for game formats and reverse-engineering findings. | [Research Portal](https://project-igi-research.vercel.app/) |
+| **IGI Research Portal** | Research | Interactive reference for IGI 1/2 binary formats and engine architecture. | [Website](https://project-igi-research.vercel.app/) |
+| **Project IGI Editor (HeavenHM)** | 3D level editor | Browser-based 3D level and mission editor for IGI 1. | [Editor](https://project-igi-editor.vercel.app) |
+| **Project IGI Studio (NaumanHSA)** | Mission editor | Mission builder with map tools, AI designer, and compiler. | [Studio](https://naumanhsa.github.io/project-igi-studio-site/) |
+| **OpenIGI** | Cross-platform reimplementation | Project I.G.I. reimplementation for Windows, Linux, macOS, and browsers; consult the project for build status. | [OpenIGI](https://openigi.com) |
+| **IGI Converter** | Asset converter | Converts and packages IGI 2D/3D assets, models, and binary formats. | [Repository](https://github.com/heaven-hm/project-igi-converter) |
+| **IGI QVM Editor** | Script tooling | Browser-based QVM editor, compiler, and decompiler. | [QVM Editor](https://igi-qvm-editor.vercel.app) |
+| **Project I.G.I. PS Vita Port** | Platform port | Community PlayStation Vita port using original PC game data (not a PSP port). | [Release discussion](https://www.reddit.com/r/VitaPiracy/comments/1wwcwi0/release_project_igi_v01_data_files/) |
+| **Neonix Remastered** | Remaster mod | Community visual and gameplay modifications for the original game. | [Nexus Mods](https://www.nexusmods.com/projectigi/mods/5) |
+| **IGI Patch (Blankname)** | Compatibility patch | Fixes and compatibility improvements for modern systems. | [Repository](https://github.com/BlanknameES/IGIPatch) |
 
-> **Development-method note:** AI assistance should be attributed to a specific project only where its maintainers document that use. The above table is a community resource index, not a list of confirmed AI-built projects.
+> **AI attribution:** Only describe a specific project as AI-assisted when its maintainers document that use.
 
 ## Templates - Section
 
