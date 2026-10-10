@@ -23,25 +23,12 @@ IGI-Research-Data 🕵️‍♂️ is a repository that contains all the researc
 ## Tools - Section
 ### 🛠️ `Tools` section contains all the custom tools that were built for Project IGI 1/2 during research. 🛠️
 
-| Tool Name               | Description                                                   | Link / Developer      |
+| Tool Name               | Description                                                   | Link      |
 |-------------------------|---------------------------------------------------------------|----------------|
-| 📜 IGI Compiler     | Compile/Decompile game binary (_QVM_) files on web.      | [Link](https://igi-compiler.streamlit.app/) |
-| 📊 IGI Graph Viewer     | Explore the game's graphs in a user-friendly interface.      | [Link](https://igi-graphviewer-hm.streamlit.app/) |
-| 🔍 IGI Models Search    | Find I.G.I models with ease.                                  | [Link](https://igi-models-search.netlify.app/) |
-| 🕵️ IGI Natives Search  | Search for game natives efficiently.                         | [Link](https://igi-natives-search.netlify.app/) |
-| 🗺️ I.G.I Level Information | Explore data related to I.G.I levels.                      | [Link](https://igi-levels-data.netlify.app/) |
-| 🖼️ IGI-Language-Mod              |  Language Mod (_Urdu Roman_) for Project IGI 1  | [Link](https://www.nexusmods.com/projectigi/mods/7?tab=description) |
-| 📁 IGI-Resource-Viewer  | View IGI resource files like _.tex, .spr, .tga_ without extraction | Dark  |
-| 📦 IGI-Resource-Convertor | Pack/Unpack IGI resource files like _.res_ Resource files       | Dark/Jones-HM |
-| 🎨 IGI-3dsMax-tools     | Export models from 3ds Max v8-Year 2005 to IGI's MEF format   | IGI-Devs |
-| 🌐 IGI-Mtp_Decoder      | MTP converter for objects (e.g., level1.dat to level1.mtp)     | Unknown |
-| 📡 IGI-EngineExtractor  | Extract variables/data from the game engine and save data externally | Jones-HM |
-| 🖼️ IGI-TGaConvertor              | Texture converter for objects (e.g., wood_material.tex, concrete_bullet.tex) to convert to PNG format | Jones-HM |
 | 🧱 IGI Editor (3D)                | Professional 3D level editor for Project I.G.I 1 — build and edit missions in the browser. | [Link](https://project-igi-editor.vercel.app) |
-| 📜 IGI QVM Editor (Web)            | Online QVM editor, compiler and decompiler for game scripts and binaries. | [Web App](https://igi-qvm-editor.vercel.app) · [Source](https://github.com/heaven-hm/project-igi-qvm-editor-web) |
+| 🔄 IGI Converter                  | Convert and package all IGI assets — 2D/3D, binaries, models and more. | [Link](https://github.com/heaven-hm/project-igi-converter) |
 | 🎬 IGI Studio                      | Mission builder with map computer, 3D close-up, *A.I* designer and built-in compiler. | [Link](https://naumanhsa.github.io/project-igi-studio-site/) |
-| 📗 IGI 1 Toolkit                   | All-in-one toolkit to edit Map, AI, Graphs, Levels and Missions. | [Link](https://www.nexusmods.com/projectigi/mods/9) |
-| 📚 IGI Research Site               | Complete binary file formats & architecture reference for the game. | [Link](https://project-igi-research.vercel.app) |
+| 📜 IGI QVM Editor (Web)            | Online QVM editor, compiler and decompiler for game scripts and binaries. | [Link](https://igi-qvm-editor.vercel.app) |
 
 
 ## Templates - Section
