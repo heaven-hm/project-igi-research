@@ -46,7 +46,6 @@ A single directory of Project I.G.I. tools, ports, remasters, mods, and compatib
 
 | Project | Category | Description | Link |
 | :--- | :--- | :--- | :--- |
-| **IGI Research Portal** | Research | Interactive reference for IGI 1/2 binary formats and engine architecture. | [Website](https://project-igi-research.vercel.app/) |
 | **Project IGI Editor (HeavenHM)** | 3D level editor | Browser-based 3D level and mission editor for IGI 1. | [Editor](https://project-igi-editor.vercel.app) |
 | **Project IGI Studio (NaumanHSA)** | Mission editor | Mission builder with map tools, AI designer, and compiler. | [Studio](https://naumanhsa.github.io/project-igi-studio-site/) |
 | **OpenIGI** | Cross-platform reimplementation | Project I.G.I. reimplementation for Windows, Linux, macOS, and browsers; consult the project for build status. | [OpenIGI](https://openigi.com) |
