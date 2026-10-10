@@ -2,6 +2,16 @@
 
 IGI-Research-Data 🕵️‍♂️ is a repository that contains all the research information for [Project I.G.I](https://en.wikipedia.org/wiki/Project_I.G.I.) game for educational purposes.
 
+## 🌐 Newly Released Web Portal
+
+We are thrilled to announce the official launch of the newly released [**Project I.G.I. Research Portal**](https://project-igi-research.vercel.app/)! This live web application serves as the complete interactive reference and digital archive for both **Project I.G.I. 1 (2000)** and **I.G.I. 2: Covert Strike (2003)** binary file formats, engine architecture, and reverse-engineered documentation, directly linked with our suite of open-source tools and converters.
+
+<p align="center">
+  <a href="https://project-igi-research.vercel.app/">
+    <img src="assets/project_igi_research_website.png" alt="Project I.G.I. Research Portal" width="100%">
+  </a>
+</p>
+
 ## Data - Section
 
 ### `Data` section contains all the data that were used for Game Level/A.I/3D-Objects/Graphs etc.
@@ -36,6 +46,7 @@ IGI-Research-Data 🕵️‍♂️ is a repository that contains all the researc
 
 | Tool Name         | Description                                                                                | Link                                                         |
 | ----------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
+| 🌐 IGI Research   | Official web portal & interactive reference for IGI 1 and IGI 2 binary formats & engine.   | [Link](https://project-igi-research.vercel.app)             |
 | 🧱 IGI Editor     | Professional 3D level editor for Project I.G.I 1 — build and edit missions in the browser. | [Link](https://project-igi-editor.vercel.app)                |
 | 🎬 IGI Studio     | Mission builder with map computer, 3D close-up, *A.I* designer and built-in compiler.      | [Link](https://naumanhsa.github.io/project-igi-studio-site/) |
 | 🎮 OpenIGI            | Open-source Project I.G.I, now ported to Windows, Linux and macOS — plus a browser edition that runs from your own copy of the game. | [Link](https://openigi.com)                     |
