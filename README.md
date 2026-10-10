@@ -34,15 +34,11 @@ IGI-Research-Data 🕵️‍♂️ is a repository that contains all the researc
 | 📁 IGI-Resource-Viewer  | View IGI resource files like _.tex, .spr, .tga_ without extraction | Dark  |
 | 📦 IGI-Resource-Convertor | Pack/Unpack IGI resource files like _.res_ Resource files       | Dark/Jones-HM |
 | 🎨 IGI-3dsMax-tools     | Export models from 3ds Max v8-Year 2005 to IGI's MEF format   | IGI-Devs |
-| 📜 IGI-QCompiler        | Compile/Decompile game scripts and binary files (QSC -> QVM, QVM -> QSC) | Jones-HM |
 | 🌐 IGI-Mtp_Decoder      | MTP converter for objects (e.g., level1.dat to level1.mtp)     | Unknown |
 | 📡 IGI-EngineExtractor  | Extract variables/data from the game engine and save data externally | Jones-HM |
-| ✏️ IGI-QVMEditor            | Powerful tool to view/edit game QVM files with features like model information, syntax highlighting, auto-complete, and more | Jones-HM |
-| 📊 IGI-GraphEditor      | Powerful tool to view/edit game Graphp files (e.g., Graph4019.dat) and analyze nodes, links, and vertices of graphs | Jones-HM |
-| 📋 IGI-Natives-Info     | Tool to view game native methods and get info about their signature and hash | Jones-HM |
 | 🖼️ IGI-TGaConvertor              | Texture converter for objects (e.g., wood_material.tex, concrete_bullet.tex) to convert to PNG format | Jones-HM |
 | 🧱 IGI Editor (3D)                | Professional 3D level editor for Project I.G.I 1 — build and edit missions in the browser. | [Link](https://project-igi-editor.vercel.app) |
-| 📜 IGI QVM Editor (Web)            | Online QVM editor, compiler and decompiler for game scripts and binaries. | [Link](https://igi-qvm-editor.vercel.app) |
+| 📜 IGI QVM Editor (Web)            | Online QVM editor, compiler and decompiler for game scripts and binaries. | [Web App](https://igi-qvm-editor.vercel.app) · [Source](https://github.com/heaven-hm/project-igi-qvm-editor-web) |
 | 🎬 IGI Studio                      | Mission builder with map computer, 3D close-up, *A.I* designer and built-in compiler. | [Link](https://naumanhsa.github.io/project-igi-studio-site/) |
 | 📗 IGI 1 Toolkit                   | All-in-one toolkit to edit Map, AI, Graphs, Levels and Missions. | [Link](https://www.nexusmods.com/projectigi/mods/9) |
 | 📚 IGI Research Site               | Complete binary file formats & architecture reference for the game. | [Link](https://project-igi-research.vercel.app) |
