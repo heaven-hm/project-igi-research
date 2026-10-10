@@ -53,6 +53,24 @@ We are thrilled to announce the official launch of the newly released [**Project
 | 🔄 IGI Converter  | Convert and package all IGI assets — 2D/3D, binaries, models and more.                     | [Link](https://github.com/heaven-hm/project-igi-converter)   |
 | 📜 IGI QVM Editor | Online QVM editor, compiler and decompiler for game scripts and binaries.                  | [Link](https://igi-qvm-editor.vercel.app)                    |
 
+## Community Ports, Remasters, Mods and Patches
+
+The following community projects complement the research and editing tools listed above. They are grouped by purpose rather than ranked by quality. Inclusion does **not** imply that a project was developed with generative AI, that all features have been independently tested, or that it is maintained by this repository.
+
+| Project | Type | Description | Link |
+| :--- | :--- | :--- | :--- |
+| **OpenIGI** | Cross-platform reimplementation | Project I.G.I. reimplementation with Windows, Linux, macOS and browser editions; see the project for current build status. | [OpenIGI](https://openigi.com) |
+| **Project IGI Editor (HeavenHM)** | 3D level editor | Browser-based level and mission editing for IGI 1. | [Editor](https://project-igi-editor.vercel.app) |
+| **Project IGI Studio (NaumanHSA)** | Mission editor | Mission-building environment with map, AI and compilation tools. | [Studio](https://naumanhsa.github.io/project-igi-studio-site/) |
+| **IGI Converter** | Asset conversion | Conversion and packaging utilities for IGI assets. | [Source](https://github.com/heaven-hm/project-igi-converter) |
+| **IGI QVM Editor** | Script tooling | Browser-based QVM editing, compiling and decompiling. | [QVM Editor](https://igi-qvm-editor.vercel.app) |
+| **Project I.G.I. PS Vita port** | Platform port | Community port requiring data from an original PC game copy; see release instructions for compatibility and status. **PS Vita, not PSP.** | [Release discussion](https://www.reddit.com/r/VitaPiracy/comments/1wwcwi0/release_project_igi_v01_data_files/) |
+| **Neonix Remastered** | Visual/gameplay mod | Community remaster modifying the original game. | [Nexus Mods](https://www.nexusmods.com/projectigi/mods/5) |
+| **IGI Patch (Blankname)** | Compatibility patch | Community fixes for running the original game on modern systems. | [IGIPatch](https://github.com/BlanknameES/IGIPatch) |
+| **IGI Research Portal** | Research documentation | Interactive reference for game formats and reverse-engineering findings. | [Research Portal](https://project-igi-research.vercel.app/) |
+
+> **Development-method note:** AI assistance should be attributed to a specific project only where its maintainers document that use. The above table is a community resource index, not a list of confirmed AI-built projects.
+
 ## Templates - Section
 
 ### `Templates` section contains templates for [010 Editor](https://www.sweetscape.com/010editor/) for both IGI1 and IGI2 game.
