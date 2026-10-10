@@ -16,9 +16,9 @@ We are thrilled to announce the official launch of the newly released [**Project
 
 ### `Data` section contains all the data that were used for Game Level/A.I/3D-Objects/Graphs etc.
 
-- `Data/AI` - Contains data scripts regarding A.I behaviors and Actions used in the level like `level/AI/503.qvm`.
-- `Data/Graphs` - Contains data regarding Graphs of the game like `Areas` information and Graph _Nodes, Vertices, Material_ information stored. It also contains some graphs converted to [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) format.
-- `Data/Misc` - The Misc section contains information about Game variables/constants used in the IGI Game engine, and a fully advanced [Cheat-Engine Table](https://en.wikipedia.org/wiki/Cheat_Engine) 🕹️ _PROJECT-IGI-1.CT_ which has data for Player/A.I/Vehicles/Game State/Profile and more.
+- [`Data/AI`](Data/AI) - Contains data scripts regarding A.I behaviors and Actions used in the level like `level/AI/503.qvm`.
+- [`Data/Graphs`](Data/Graphs) - Contains data regarding Graphs of the game like `Areas` information and Graph _Nodes, Vertices, Material_ information stored. It also contains some graphs converted to [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) format.
+- [`Data/Misc`](Data/Misc) - The Misc section contains information about Game variables/constants used in the IGI Game engine, and a fully advanced [Cheat-Engine Table](https://en.wikipedia.org/wiki/Cheat_Engine) 🕹️ _PROJECT-IGI-1.CT_ which has data for Player/A.I/Vehicles/Game State/Profile and more.
 
 ## Research - Section
 
@@ -26,19 +26,19 @@ We are thrilled to announce the official launch of the newly released [**Project
 
 | Format | Extension | What's Included | Path |
 | :--- | :--- | :--- | :--- |
-| **DAT** | `.dat` | Level asset lookup tables and model-to-texture ID mappings | `Research/DAT` |
-| **FNT** | `.fnt` | In-game bitmap font format, glyph metrics, and character atlas mapping | `Research/FNT` |
-| **IFF** | `.iff` | Skeletal animation container and REIH bone hierarchy chunks (31/47 bones) | `Research/IFF` |
-| **ILFF** | Container | Innerloop shared binary container header (20-byte) and chunk architecture | `Research/ILFF` |
-| **MEF** | `.mef` | 3D mesh & model format, vertex buffers, polygon indices, UVs, and materials | `Research/MEF` |
-| **MTP** | `.mtp` | Terrain heightfield elevation grids, tiles, textures, and object placements | `Research/MTP` |
-| **PIC** | `.pic` | Innerloop picture graphic format and uncompressed tile data | `Research/TEX` |
-| **QSC** | `.qsc` | Human-readable Q-Script source code and mission script syntax | `Research/QSC` |
-| **QVM** | `.qvm` | Virtual machine compiled bytecode, instruction sets, and header structures | `Research/QVM` |
-| **RES** | `.res` | Resource archive container (ILFF IRES) bundling models, textures, and scripts | `Research/RES` |
-| **SPR** | `.spr` | In-game sprite graphic format and tile structures | `Research/TEX` |
-| **TEX** | `.tex` | LOOP 2/7/9/11 uncompressed texture format, mipmaps, and color palettes | `Research/TEX` |
-| **WAV** | `.wav` | Audio format, Innerloop ILSF chunk headers, raw PCM and IMA ADPCM | `Research/WAV` |
+| **DAT** | `.dat` | Level asset lookup tables and model-to-texture ID mappings | [`Research/DAT`](Research/DAT) |
+| **FNT** | `.fnt` | In-game bitmap font format, glyph metrics, and character atlas mapping | [`Research/FNT`](Research/FNT) |
+| **IFF** | `.iff` | Skeletal animation container and REIH bone hierarchy chunks (31/47 bones) | [`Research/IFF`](Research/IFF) |
+| **ILFF** | Container | Innerloop shared binary container header (20-byte) and chunk architecture | [`Research/ILFF`](Research/ILFF) |
+| **MEF** | `.mef` | 3D mesh & model format, vertex buffers, polygon indices, UVs, and materials | [`Research/MEF`](Research/MEF) |
+| **MTP** | `.mtp` | Terrain heightfield elevation grids, tiles, textures, and object placements | [`Research/MTP`](Research/MTP) |
+| **PIC** | `.pic` | Innerloop picture graphic format and uncompressed tile data | [`Research/TEX`](Research/TEX) |
+| **QSC** | `.qsc` | Human-readable Q-Script source code and mission script syntax | [`Research/QSC`](Research/QSC) |
+| **QVM** | `.qvm` | Virtual machine compiled bytecode, instruction sets, and header structures | [`Research/QVM`](Research/QVM) |
+| **RES** | `.res` | Resource archive container (ILFF IRES) bundling models, textures, and scripts | [`Research/RES`](Research/RES) |
+| **SPR** | `.spr` | In-game sprite graphic format and tile structures | [`Research/TEX`](Research/TEX) |
+| **TEX** | `.tex` | LOOP 2/7/9/11 uncompressed texture format, mipmaps, and color palettes | [`Research/TEX`](Research/TEX) |
+| **WAV** | `.wav` | Audio format, Innerloop ILSF chunk headers, raw PCM and IMA ADPCM | [`Research/WAV`](Research/WAV) |
 
 ## Tools and Mods
 
@@ -51,7 +51,7 @@ A single directory of Project I.G.I. tools, ports, remasters, mods, and compatib
 | **OpenIGI** | Cross-platform reimplementation | Project I.G.I. reimplementation for Windows, Linux, macOS, and browsers; consult the project for build status. | [OpenIGI](https://openigi.com) |
 | **Project IGI Studio (NaumanHSA)** | Mission editor | Mission builder with map tools, AI designer, and compiler. | [Studio](https://naumanhsa.github.io/project-igi-studio-site/) |
 | **IGI QVM Editor** | Script tooling | Browser-based QVM editor, compiler, and decompiler. | [QVM Editor](https://igi-qvm-editor.vercel.app) |
-| **Project I.G.I. PS Vita Port** | Platform port | Community PlayStation Vita port using original PC game data (not a PSP port). | [Release discussion](https://www.reddit.com/r/VitaPiracy/comments/1wwcwi0/release_project_igi_v01_data_files/) |
+| **Project I.G.I. PS Vita Port** | Platform port | Community PlayStation Vita port using original PC game data (not a PSP port); source repository not confirmed publicly available. | [Release discussion](https://www.reddit.com/r/VitaPiracy/comments/1wwcwi0/release_project_igi_v01_data_files/) |
 | **Neonix Remastered** | Remaster mod | Community visual and gameplay modifications for the original game. | [Nexus Mods](https://www.nexusmods.com/projectigi/mods/5) |
 | **IGI Patch (Blankname)** | Compatibility patch | Fixes and compatibility improvements for modern systems. | [Repository](https://github.com/BlanknameES/IGIPatch) |
 
