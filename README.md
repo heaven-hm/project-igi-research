@@ -23,16 +23,13 @@ IGI-Research-Data 🕵️‍♂️ is a repository that contains all the researc
 ## Tools - Section
 ### 🛠️ `Tools` section contains all the custom tools that were built for Project IGI 1/2 during research. 🛠️
 
-| Tool Name               | Description                                                   | Developer      |
+| Tool Name               | Description                                                   | Link / Developer      |
 |-------------------------|---------------------------------------------------------------|----------------|
-| 📜 IGI Compiler     | Compile/Decompile game binary (_QVM_) files on web.      | |
+| 📜 IGI Compiler     | Compile/Decompile game binary (_QVM_) files on web.      | [Link](https://igi-compiler.streamlit.app/) |
 | 📊 IGI Graph Viewer     | Explore the game's graphs in a user-friendly interface.      | [Link](https://igi-graphviewer-hm.streamlit.app/) |
 | 🔍 IGI Models Search    | Find I.G.I models with ease.                                  | [Link](https://igi-models-search.netlify.app/) |
 | 🕵️ IGI Natives Search  | Search for game natives efficiently.                         | [Link](https://igi-natives-search.netlify.app/) |
-| 📈 IGI Natives Analyzer | Analyze game natives with detailed insights.                  | [Link](https://igi-natives-analyzer.streamlit.app/) |
 | 🗺️ I.G.I Level Information | Explore data related to I.G.I levels.                      | [Link](https://igi-levels-data.netlify.app/) |
-| 📜 I.G.I AI Data Information | Explore *A.I* information of all I.G.I levels.                      | [Link](https://igi-ai-info.streamlit.app/) |
-| 📜 I.G.I Missions AI Analyzer | Explore Mission *Soldiers* information of all I.G.I levels.                      | | 
 | 🖼️ IGI-Language-Mod              |  Language Mod (_Urdu Roman_) for Project IGI 1  | [Link](https://www.nexusmods.com/projectigi/mods/7?tab=description) |
 | 📁 IGI-Resource-Viewer  | View IGI resource files like _.tex, .spr, .tga_ without extraction | Dark  |
 | 📦 IGI-Resource-Convertor | Pack/Unpack IGI resource files like _.res_ Resource files       | Dark/Jones-HM |
@@ -44,6 +41,11 @@ IGI-Research-Data 🕵️‍♂️ is a repository that contains all the researc
 | 📊 IGI-GraphEditor      | Powerful tool to view/edit game Graphp files (e.g., Graph4019.dat) and analyze nodes, links, and vertices of graphs | Jones-HM |
 | 📋 IGI-Natives-Info     | Tool to view game native methods and get info about their signature and hash | Jones-HM |
 | 🖼️ IGI-TGaConvertor              | Texture converter for objects (e.g., wood_material.tex, concrete_bullet.tex) to convert to PNG format | Jones-HM |
+| 🧱 IGI Editor (3D)                | Professional 3D level editor for Project I.G.I 1 — build and edit missions in the browser. | [Link](https://project-igi-editor.vercel.app) |
+| 📜 IGI QVM Editor (Web)            | Online QVM editor, compiler and decompiler for game scripts and binaries. | [Link](https://igi-qvm-editor.vercel.app) |
+| 🎬 IGI Studio                      | Mission builder with map computer, 3D close-up, *A.I* designer and built-in compiler. | [Link](https://naumanhsa.github.io/project-igi-studio-site/) |
+| 📗 IGI 1 Toolkit                   | All-in-one toolkit to edit Map, AI, Graphs, Levels and Missions. | [Link](https://www.nexusmods.com/projectigi/mods/9) |
+| 📚 IGI Research Site               | Complete binary file formats & architecture reference for the game. | [Link](https://project-igi-research.vercel.app) |
 
 
 ## Templates - Section
@@ -61,7 +63,7 @@ If you want to use this data, respect fellow researchers and give proper credits
 - [Artiom Rotari](https://github.com/NEWME0) 🌟 : _DConv Tools for Decompiler_ and **Scripts**.
 - [ORWA S](https://www.youtube.com/@totalwartimelapses6359) 🌟 - **Graphs Area and Nodes** compilation of information.
 - [GM123](https://www.youtube.com/@gm1233) 🌟 - **Detailed Models Information**.
-- [Dark](https://www.youtube.com/@CRONOQUILLOFFICIAL)🌟 - **Contrinuted on Various Projects and files (Resources,QVM,QSC etc) and UI/UX Designs**.
+- **Dark** 🌟 - **Contrinuted on Various Projects and files (Resources,QVM,QSC etc) and UI/UX Designs**.
 - [Ferit Coder](https://www.youtube.com/channel/UCpn_gZMkFVBUAe9SJK9hYQA) 🌟 - **Helped with IGI 2 Editor **Maps/Models** conversion to IGI 1.**.
 - [IGI ResearchDevs@HM](https://vk.com/id679925339) 🌟 - **Maintainer of this repo**.
 - [Chat-GPT Advanced](https://chat.openai.com/) 🌟 - **Understanding complex game mechanics** with _Reverse Engineering_ and **Advaced Data Analysis** of Game files _QVM,QSC,.DAT and more_.
