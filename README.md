@@ -39,6 +39,7 @@ IGI-Research-Data 🕵️‍♂️ is a repository that contains all the researc
 | 🧱 IGI Editor     | Professional 3D level editor for Project I.G.I 1 — build and edit missions in the browser. | [Link](https://project-igi-editor.vercel.app)                |
 | 🎬 IGI Studio     | Mission builder with map computer, 3D close-up, *A.I* designer and built-in compiler.      | [Link](https://naumanhsa.github.io/project-igi-studio-site/) |
 | 🎮 OpenIGI            | Open-source Project I.G.I, now ported to Windows, Linux and macOS — plus a browser edition that runs from your own copy of the game. | [Link](https://openigi.com)                     |
+| 🔄 IGI Converter  | Convert and package all IGI assets — 2D/3D, binaries, models and more.                     | [Link](https://github.com/heaven-hm/project-igi-converter)   |
 | 📜 IGI QVM Editor | Online QVM editor, compiler and decompiler for game scripts and binaries.                  | [Link](https://igi-qvm-editor.vercel.app)                    |
 
 ## Templates - Section
