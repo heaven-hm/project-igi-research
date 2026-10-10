@@ -14,7 +14,7 @@ IGI-Research-Data 🕵️‍♂️ is a repository that contains all the researc
 - `Research/QVM` - Contains a file explaining the structure of QVM. 🧩
 - `Research/QSC` - Contains a file explaining the structure of QSC _Q-Scripts_. These files were decompiled using *Python* 🐍 tool. 📜
 - `Research/Natives` - File contains Natives now as `Source Code` in `Assembly/C++` format as well used for `Project IGI 1`. All natives methods were decompiled using the original game `igi.exe` using **IDA/Ghidra** for educational purposes, not intending any harm to game files and their property. 📝
-- `Research/Models` - File `IGI-Models.json` contains a list of almost 600 different building/object model information, including `MEF` data. This data was extracted using `Debug-Mode` used by developers in testing, which can be unlocked using this script [IGI-Debug-Mode](https://gist.github.com/haseeb-heaven/721d82fccc8de3e6da95cfa609230cea). 🏗️
+- `Research/Models` - File `IGI-Models.json` contains a list of almost 600 different building/object model information, including `MEF` data. This data was extracted using `Debug-Mode` used by developers in testing, which can be unlocked using this script [IGI-Debug-Mode]. 🏗️
 - `Research/BONES` - Contains `BONES` information of Players joint structures.
 - `Research/LEVEL` - Contains `LEVEL` related information like _building,objects,ai_ in the levels.
 - `Research/SCRIPT` - Contains `SCRIPT` of the game known as *QSC* (*Q* _Script File_) which is used to manipulate _AI/Building/Objects and more_.
@@ -25,14 +25,14 @@ IGI-Research-Data 🕵️‍♂️ is a repository that contains all the researc
 
 | Tool Name               | Description                                                   | Developer      |
 |-------------------------|---------------------------------------------------------------|----------------|
-| 📜 IGI Compiler     | Compile/Decompile game binary (_QVM_) files on web.      | [Link](https://igi-compiler.streamlit.app/) |
+| 📜 IGI Compiler     | Compile/Decompile game binary (_QVM_) files on web.      | |
 | 📊 IGI Graph Viewer     | Explore the game's graphs in a user-friendly interface.      | [Link](https://igi-graphviewer-hm.streamlit.app/) |
 | 🔍 IGI Models Search    | Find I.G.I models with ease.                                  | [Link](https://igi-models-search.netlify.app/) |
 | 🕵️ IGI Natives Search  | Search for game natives efficiently.                         | [Link](https://igi-natives-search.netlify.app/) |
 | 📈 IGI Natives Analyzer | Analyze game natives with detailed insights.                  | [Link](https://igi-natives-analyzer.streamlit.app/) |
 | 🗺️ I.G.I Level Information | Explore data related to I.G.I levels.                      | [Link](https://igi-levels-data.netlify.app/) |
 | 📜 I.G.I AI Data Information | Explore *A.I* information of all I.G.I levels.                      | [Link](https://igi-ai-info.streamlit.app/) |
-| 📜 I.G.I Missions AI Analyzer | Explore Mission *Soldiers* information of all I.G.I levels.                      | [Link](https://igi-missions-analyzer.streamlit.app/) | 
+| 📜 I.G.I Missions AI Analyzer | Explore Mission *Soldiers* information of all I.G.I levels.                      | | 
 | 🖼️ IGI-Language-Mod              |  Language Mod (_Urdu Roman_) for Project IGI 1  | [Link](https://www.nexusmods.com/projectigi/mods/7?tab=description) |
 | 📁 IGI-Resource-Viewer  | View IGI resource files like _.tex, .spr, .tga_ without extraction | Dark  |
 | 📦 IGI-Resource-Convertor | Pack/Unpack IGI resource files like _.res_ Resource files       | Dark/Jones-HM |
