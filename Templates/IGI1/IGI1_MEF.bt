@@ -1,14 +1,17 @@
 //------------------------------------------------
 //--- 010 Editor v9.0.1 Binary Template
 //
-//      File: IGI2_MEF.bt
+//      File: IGI1_MEF.bt
 //   Authors: Rotari Artiom
-//   Version: 1.0
-//   Purpose: 
+//   Version: 1.1
+//   Purpose: IGI 1 MEF / ILFF parser with bone-model (model_type 1) records
 //  Category: Game
 // File Mask: ILFF
-//  ID BYTEs: 
-//   History: 
+//  ID BYTEs:
+//   History:
+//     1.1 - issue #7: named HSEM counts, variable-length DNER, distinct
+//           XTRV case 1 (40-byte bone vertex), XTVC bone index, and optional
+//           REIH/MANB structs. See Research/MEF/IGI1_MEF_BONES.md for evidence.
 //------------------------------------------------
 
 
@@ -60,20 +63,73 @@ typedef struct HSEM
     F4 f9;
     F4 fa;
     F4 fb;
-    U4 _4;
-    U4 _5;
-    U4 _6;
-    U4 _7;
-    U4 _8;
-    U4 _9;
-    F4 fc;
-    U2 _a;
-    U2 _b;
-    U2 _c;
-    U2 _d;
-    U2 _e;
-    U2 _f;
-    U1 rs[20];
+    U4 _4;  // num_r_faces  (render faces)
+    U4 _5;  // num_r_verts  (render vertices)
+    U4 _6;  // num_r_buffer (d3dr/dner/xtrv/pmtl byte count)
+    U4 _7;  // sum_c_faces
+    U4 _8;  // sum_c_verts
+    U4 _9;  // sum_c_buffer
+    F4 fc;  // model radius
+    U2 _a;  // num_mverts
+    U2 _b;  // num_attachments
+    U2 _c;  // num_pverts
+    U2 _d;  // num_pfaces
+    U2 _e;  // num_portals
+    U2 _f;  // bone-count candidate in some MEFs; not verified in IGI1 samples
+    U1 rs[20]; // padding / reserved (kept at 20 so the 156-byte size is unchanged)
+
+    Padding();
+};
+
+//------------------------------------------------
+// OPTIONAL BONE CHUNKS
+// Adapted from Templates/IGI2/IGI2_MEF.bt. The IGI 1 bone samples used for
+// issue #7 do NOT contain REIH/MANB: bone membership is carried by the 40-byte
+// XTRV records (field bn) and bone names come from the animation file. These
+// structs are provided so that a file which does contain them still parses;
+// their presence in IGI 1 is not asserted.
+//------------------------------------------------
+struct HBONE1;
+
+typedef struct
+{
+    UBYTE child_count;
+
+    local UBYTE boneid = bone_id++;
+    local UBYTE i = 0;
+
+    for(i = 0; i < child_count; i++)
+        HBONE1 bone;
+} HBONE1 <read=Read_HBONE1>;
+
+string Read_HBONE1(HBONE1 &o)
+{
+    // MANB is optional in IGI 1, so do not reference it here; names remain
+    // visible in the MANB struct itself when that chunk is present.
+    local string s = "";
+    SPrintf(s, "bone %d", o.boneid);
+    return s;
+};
+
+typedef struct REIH
+{
+    ILFF_HEADER header;
+
+    local UBYTE bone_id = 0;
+    HBONE1 root;
+
+    Align(4);
+
+    FVECTOR3 bone_position[bone_id];
+
+    Padding();
+};
+
+typedef struct MANB
+{
+    ILFF_HEADER header;
+
+    FSTRING bone_name(16)[header.datasize / 16];
 
     Padding();
 };
@@ -208,50 +264,68 @@ typedef struct D3DR
 };
 
 // RENDER MESH DEFINE
+// DNER is a sequence of variable-length records: 28-byte header (rigid/bone)
+// or 32-byte header (lightmap) followed by num_face uint16 face indices.
+// Measured with the Python converter: 428/428 rigid and 126/126 bone samples
+// from the supplied archive have HSEM face/vertex counts that match this
+// record walk (Research/MEF/MEF_PYTHON_CONVERTER.md).
+typedef struct DNER_0
+{
+    F4 px;
+    F4 py;
+    F4 pz;
+    U2 num_face;
+    U2 nextoffs;
+    S2 _td;
+    U2 off_verts;
+    U2 num_verts;
+    U2 _opacity;
+    U1 _Eflame;
+    U1 _mshine;
+    U1 _Scolor;
+    U1 _Opacitd;
+    U2 face[num_face];
+};
+
+typedef struct DNER_3
+{
+    F4 px;
+    F4 py;
+    F4 pz;
+    U2 num_face;
+    U2 nextoffs;
+    S2 _td;
+    S2 _lmap;
+    U2 off_verts;
+    U2 num_verts;
+    U2 _opacity;
+    U2 _0;
+    U1 _Eflame;
+    U1 _mshine;
+    U1 _mcolor;
+    U1 _Opacitd;
+    U2 face[num_face];
+};
+
 typedef struct DNER
 {
     ILFF_HEADER header;
 
-    switch(igi1_mef.hsem.mt)
-    {
-        case 0:
-        case 1:
-        struct
-        {
-            F4 px;
-            F4 py;
-            F4 pz;
-            S2 fn;
-            S2 fx;
-            S2 _5;
-            S2 vo;
-            S2 vn;
-            S2 _8;
-            S2 _9;
-            S2 _a;
-            U2 face[fn];
-        } mesh[igi1_mef.d3dr.mn] <optimize=false>;
-        break;
+    local U4 end = FTell() + header.datasize;
 
-        case 3:
-        struct
+    while(FTell() < end)
+    {
+        switch(igi1_mef.hsem.mt)
         {
-            F4 px;
-            F4 py;
-            F4 pz;
-            S2 fn;
-            S2 fx;
-            S2 _5;
-            S2 _6;
-            S2 vo;
-            S2 vn;
-            S2 _9;
-            S2 _a;
-            S2 _b;
-            S2 _c;
-            U2 face[fn];
-        } mesh[igi1_mef.d3dr.mn] <optimize=false>;
-        break;
+            case 0:
+            case 1:
+                DNER_0 mesh;
+            break;
+
+            case 3:
+                DNER_3 mesh;
+            break;
+        }
     }
 
     Padding();
@@ -270,24 +344,44 @@ typedef struct XTRV
             F4 px;
             F4 py;
             F4 pz;
-            F4 _3;
-            F4 _4;
-            F4 _5;
+            F4 nx;
+            F4 ny;
+            F4 nz;
             F4 u0;
             F4 v0;
         } vertex[header.datasize / 32];
         break;
 
+        // Bone model: same 40-byte stride as lightmap models but the last
+        // four fields are (w, local vertex id, bone index), NOT a second UV.
+        // Checked against 126 archive bone samples: datasize % 40 == 0 and
+        // the bn field indexes a bone table (values well above 48 occur).
         case 1:
+        struct
+        {
+            F4 px;
+            F4 py;
+            F4 pz;
+            F4 nx;
+            F4 ny;
+            F4 nz;
+            F4 u0;
+            F4 v0;
+            F4 w;
+            U2 vn;
+            U2 bn;
+        } vertex[header.datasize / 40];
+        break;
+
         case 3:
         struct
         {
             F4 px;
             F4 py;
             F4 pz;
-            F4 _3;
-            F4 _4;
-            F4 _5;
+            F4 nx;
+            F4 ny;
+            F4 nz;
             F4 u0;
             F4 v0;
             F4 u1;
@@ -342,10 +436,10 @@ typedef struct XTVC
 
     struct
     {
-        F4 _0;
-        F4 _1;
-        F4 _2;
-        F4 _3;
+        F4 px;
+        F4 py;
+        F4 pz;
+        U4 bn;  // bone index on bone models (issue #7)
     } vertex[header.datasize / 16];
 
     Padding();
@@ -358,10 +452,10 @@ typedef struct ECFC
 
     struct
     {
-        U2 _0;
-        U2 _1;
-        U2 _2;
-        U2 _3;
+        U2 a;
+        U2 b;
+        U2 c;
+        U2 _mat;
     } face[header.datasize / 8];
 
     Padding();
@@ -428,6 +522,9 @@ struct
         switch(ReadString(FTell(), 4))
         {
             case "HSEM": HSEM hsem; break;
+            // Optional; not present in the audited IGI 1 bone samples.
+            case "REIH": REIH reih; break;
+            case "MANB": MANB manb; break;
             case "ATTA": ATTA atta; break;
             case "XTVM": XTVM xtvm; break;
             case "TROP": TROP trop; break;
