@@ -1,0 +1,153 @@
+//------------------------------------------------
+//--- 010 Editor Binary Template (extended, evidence-backed)
+//
+//      File: IGI1_IFF_extended.bt
+//   Purpose: IGI 1 skeletal animation (.IFF) reader. Extends the original
+//            Rotari Artiom IGI1_IFF.bt with named payloads for the chunks
+//            requested in heaven-hm/project-igi-research issue #1
+//            (TLST, BORH/BORD, PLST, BOAH, BOED).
+//   Provenance: https://github.com/heaven-hm/project-igi-research/issues/1
+//               Sample 000.iff SHA-256
+//               0c704abab62d23cc4a088778e8e06958a9b2be3de4f41921b317bfb35151b051
+//               See Research/IFF/IFF_EXTENDED.md for measurements and limits.
+//   Status: verified against the issue #1 sample only. Not a claim about all
+//           retail IGI 1 animations (31/47-bone variants were not supplied).
+//------------------------------------------------
+
+struct CHUNK;
+
+// Chunk headers are big-endian; payload scalars are little-endian in the
+// audited sample. The original Artiom template left payloads as opaque DFLT.
+typedef struct
+{
+    char fourcc[4];
+
+    BigEndian();
+    uint32 size;            // payload byte count, excludes the 8-byte header
+    LittleEndian();
+
+    local int64 startPos = FTell();
+
+    if (fourcc == "FORM")
+    {
+        // FORM payload begins with a 4-byte form type. Measured values:
+        // BOBJ (outer), BOBH (skeleton), BOAL (animation list), BOAN (animation).
+        char formType[4];
+        while (FTell() < startPos + size)
+        {
+            CHUNK subChunk;
+        }
+    }
+    else if (fourcc == "BOSH")
+    {
+        // Measured: typeAnims = 0, numBones = 33.
+        uint32 typeAnims;
+        uint32 numBones;
+    }
+    else if (fourcc == "PLST")
+    {
+        // Parent index per bone. 0xFFFFFFFF (-1) is the root.
+        // Measured: 33 entries, matching BOSH.numBones and TLST count.
+        int32 parent[size / 4];
+    }
+    else if (fourcc == "TLST")
+    {
+        // Rest translation per bone in model units.
+        // Measured: 33 records of 12 bytes.
+        struct
+        {
+            float px;
+            float py;
+            float pz;
+        } bonePosition[size / 12];
+    }
+    else if (fourcc == "BALH")
+    {
+        // Measured: numAnims = 122, lastAnimID = 247.
+        uint32 numAnims;
+        uint32 lastAnimID;
+    }
+    else if (fourcc == "BOAH")
+    {
+        // 12 bytes. word0 as float yields integral values in the sample
+        // (13280.0, 11200.0, ...); its unit is not established. word1 is
+        // {uint16 unk, uint16 loopFlag}; word2 is the animation ID.
+        uint32 durationWord;
+        uint16 unk00;
+        uint16 loopFlag;
+        uint32 animID;
+    }
+    else if (fourcc == "BOTH")
+    {
+        uint32 numTranslationKeys;
+    }
+    else if (fourcc == "BOTD")
+    {
+        // 40 bytes per translation key. size/40 == BOTH.numTranslationKeys
+        // in every animation of the audited sample.
+        struct
+        {
+            float px;
+            float py;
+            float pz;
+            float time;
+            float unknown[6];   // zeros in the first record of the sample
+        } translation[size / 40];
+    }
+    else if (fourcc == "BORH")
+    {
+        // Number of rotation records in the immediately following BORD.
+        // Verified for 4026/4026 pairs: BORD.size == 52 * BORH.count.
+        uint32 count;
+    }
+    else if (fourcc == "BORD")
+    {
+        // 52 bytes = 13 floats. First record of the sample:
+        // [qx,qy,qz,qw, 0.0, qx,qy,qz,qw, qx,qy,qz,qw].
+        // Grouping into 3 keys + unknown is an interpretation, not proven.
+        struct
+        {
+            float rotData[13];
+        } rotation[size / 52];
+    }
+    else if (fourcc == "BOEH")
+    {
+        uint32 count;
+    }
+    else if (fourcc == "BOED")
+    {
+        // All 122 BOED chunks have size % 24 == 0 in the audited sample.
+        struct
+        {
+            int32 eventID;
+            int32 boneID;
+            float time;
+            float px;
+            float py;
+            float pz;
+        } event[size / 24];
+    }
+    else
+    {
+        if (size > 0)
+            byte rawData[size];
+    }
+
+    // Some FORM children declare a size that runs past the parent FORM's
+    // declared end (BOAL at 0x248 in the sample). Seeking by the child's own
+    // size is what makes the file parse to EOF; do not clamp to the parent.
+    BigEndian();
+    FSeek(startPos + size);
+} CHUNK <read=ReadChunkName>;
+
+string ReadChunkName(CHUNK &c)
+{
+    return c.fourcc;
+}
+
+while (!FEof())
+{
+    CHUNK root;
+}
+
+Assert(FEof(), "Parsing error: expected end of file");
